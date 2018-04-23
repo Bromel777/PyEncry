@@ -7,7 +7,11 @@ class Script(serialization.JsonSerializable):
         self.complexity_score = complexity_score
         self.script_fingerprint = script_fingerprint
 
-    def json(self):
+    def to_json(self):
+        pass
+
+    @staticmethod
+    def from_json(json):
         pass
 
 
@@ -22,7 +26,11 @@ class TransferDirective(Directive):
         self.idx = idx
         self.token_id = token_id
 
-    def json(self):
+    def to_json(self):
+        pass
+
+    @staticmethod
+    def from_json(json):
         pass
 
 
@@ -33,7 +41,11 @@ class AssetIssuingDirective(Directive):
         self.idx = idx
         self.symbol = symbol
 
-    def json(self):
+    def to_json(self):
+        pass
+
+    @staticmethod
+    def from_json(json):
         pass
 
 
@@ -46,7 +58,11 @@ class Transaction(serialization.JsonSerializable):
         self.directives = directives
         self.signature = signature
 
-    def json(self):
+    def to_json(self):
+        pass
+
+    @staticmethod
+    def from_json(json):
         pass
 
     def message_to_sign(self):
